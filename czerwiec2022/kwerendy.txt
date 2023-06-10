@@ -1,0 +1,11 @@
+Zapytanie 1:
+SELECT id, nazwa, wystepowanie FROM Ryby WHERE styl_zycia = '1';
+
+Zapytanie 2:
+SELECT Ryby_id, wymiar_ochronny FROM Okres_ochronny WHERE wymiar_ochronny < '30'
+
+Zapytanie 3:
+SELECT r.nazwa, l.akwen, l.wojewodztwo FROM Ryby r INNER JOIN lowisko l ON l.Ryby_id = r.id WHERE rodzaj = '3'
+
+Zapytanie 4:
+ALTER TABLE ryby ADD `dobowy_limit` INT(255) NOT NULL AFTER `styl_zycia`;

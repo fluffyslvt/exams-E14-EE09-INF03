@@ -1,0 +1,5 @@
+SELECT czas, kierunek, nr_rejsu, status_lotu FROM przyloty ORDER BY czas ASC;
+
+SELECT COUNT(id) FROM przyloty WHERE czas LIKE "10:%%:00";
+
+SELECT p.nr_rejsu, s.typ FROM przyloty p INNER JOIN samoloty s ON p.samoloty_id = s.id WHERE p.kierunek = "Warszawa";
