@@ -1,0 +1,16 @@
+ZAPYTANIE 1:
+SELECT imie, nazwisko FROM autorzy;
+
+ZAPYTANIE 2:
+INSERT INTO czytelnicy VALUES (NULL, "Anna", "Michalak", "ANMI05");
+
+ZAPYTANIE 3:
+SELECT tytul FROM ksiazki WHERE id_kategoria = 1;
+
+// alt wersja
+SELECT ksiazki.tytul FROM ksiazki, kategorie 
+WHERE ksiazki.id_kategoria = kategorie.id AND kategorie.nazwa = 'epika';
+
+ZAPYTANIE 4:
+SELECT k.tytul FROM ksiazki k, wypozyczenia w 
+WHERE w.id_czytelnik = 3 AND w.id_ksiazka = k.id;
